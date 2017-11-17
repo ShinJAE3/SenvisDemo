@@ -1,0 +1,7 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../inc
+
+APISRC  += ../inc/pb_multitemplate_enrollment.h
+APISRC  += ../inc/pb_multitemplate_enrollment_algorithm.h
+APISRC  += ../inc/pb_synthetic_image.h

@@ -1,0 +1,5 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../../inc
+
+APISRC  += ../../inc/pbpng.h

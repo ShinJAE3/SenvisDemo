@@ -1,0 +1,6 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../inc
+
+APISRC  += ../inc/pb_hybrid_moc_algorithm.h
+APISRC  += ../inc/pb_hybrid_moc_encoder.h

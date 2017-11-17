@@ -1,0 +1,7 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../../inc
+
+APISRC  += ../../inc/pb_timestamp.h
+APISRC  += ../../inc/pb_fpdb.h
+APISRC  += ../../inc/pb_crc32.h

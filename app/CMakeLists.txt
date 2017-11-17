@@ -10,14 +10,17 @@ cmake_minimum_required(VERSION 3.4.1)
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
+add_library( bmf-lib
+             STATIC
+             IMPORTED )
 
-#add_library( libBMF
-#             STATIC
-#             IMPORTED )
+set_target_properties( bmf-lib
+                       PROPERTIES IMPORTED_LOCATION
+                       ${PROJECT_SOURCE_DIR}/src/main/JniLibs/${ANDROID_ABI}/libBMF.a )
 
-#set_target_properties( libBMF
-#                       PROPERTIES IMPORTED_LOCATION
-#                       ${CMAKE_CURRENT_SOURCE_DIR}/jniLibs/libBMF.a )
+include_directories( ${PROJECT_SOURCE_DIR}/inc/ )
+
+#add_dependencies( native-lib2 bmf-lib )
 
 add_library( # Sets the name of the library.
              native-lib
@@ -25,6 +28,13 @@ add_library( # Sets the name of the library.
              SHARED
              # Provides a relative path to your source file(s).
              src/main/cpp/native-lib.cpp )
+
+add_library( # Sets the name of the library.
+             native-lib2
+             # Sets the library as a shared library.
+             SHARED
+             # Provides a relative path to your source file(s).
+             src/main/cpp/native-lib2.cpp )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -45,7 +55,17 @@ find_library( # Sets the name of the path variable.
 target_link_libraries( # Specifies the target library.
                        native-lib
                        -ljnigraphics
-                       # libBMF
+                       #bmf-lib
+                       #app-glue
+                       # Links the target library to the log library
+                       # included in the NDK.
+                       ${log-lib} )
+
+target_link_libraries( # Specifies the target library.
+                       native-lib2
+                       -ljnigraphics
+                       ${bmf-lib}
+                       #app-glue
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib} )

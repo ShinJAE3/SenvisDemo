@@ -1,0 +1,9 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../../inc
+
+APISRC  += ../../inc/pbtypes.h
+APISRC  += ../../inc/pbbir.h
+APISRC  += ../../inc/pberrno.h
+APISRC  += ../../inc/pbmoc.h
+APISRC  += ../../inc/stdint.h

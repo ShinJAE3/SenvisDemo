@@ -1,0 +1,31 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../inc
+
+APISRC  += ../inc/pb_returncodes.h
+APISRC  += ../inc/pb_returncode_converter.h
+APISRC  += ../inc/pb_types.h
+APISRC  += ../inc/pb_algorithm.h
+APISRC  += ../inc/pb_algorithmI.h
+APISRC  += ../inc/pb_alignment.h
+APISRC  += ../inc/pb_databaseI.h
+APISRC  += ../inc/pb_defenderI.h
+APISRC  += ../inc/pb_extractorI.h
+APISRC  += ../inc/pb_finger.h
+APISRC  += ../inc/pb_guiI.h
+APISRC  += ../inc/pb_identifier.h
+APISRC  += ../inc/pb_identifierI.h
+APISRC  += ../inc/pb_image_t.h
+APISRC  += ../inc/pb_image.h
+APISRC  += ../inc/pb_iterator.h
+APISRC  += ../inc/pb_multitemplate.h
+APISRC  += ../inc/pb_match_result.h
+APISRC  += ../inc/pb_preprocessorI.h
+APISRC  += ../inc/pb_quality.h
+APISRC  += ../inc/pb_qualityI.h
+APISRC  += ../inc/pb_reader.h
+APISRC  += ../inc/pb_sensorI.h
+APISRC  += ../inc/pb_session.h
+APISRC  += ../inc/pb_template.h
+APISRC  += ../inc/pb_user.h
+APISRC  += ../inc/pb_verifierI.h

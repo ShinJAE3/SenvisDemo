@@ -1,0 +1,6 @@
+# Generated API module definition file
+
+API     = -I$(DIR)/../inc
+
+APISRC  += ../inc/pb_slice_renderer.h
+APISRC  += ../inc/pb_segmented_slicemem.h

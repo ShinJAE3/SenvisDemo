@@ -1,5 +1,6 @@
 package com.senvis.finger.senvisdemo;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
@@ -99,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
         edSVF_ADC_REF = (EditText) findViewById(R.id.edSVF_ADC_REF);
         edSVF_THRESHOLD = (EditText) findViewById(R.id.edSVF_THRESHOLD);
 
+        Intent intent = new Intent("com.senvis.finger.senvisdemo.service");
+        startService(intent);
+
+/*
         thread = new Thread() {
             @Override
             public void run() {
@@ -112,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-
+*/
 /*
         Button btnJni = (Button) findViewById(R.id.button);
         btnJni.setOnClickListener(new View.OnClickListener() {
